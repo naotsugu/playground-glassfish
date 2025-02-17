@@ -28,8 +28,10 @@ task<Exec>("run") {
     dependsOn("war")
 
     // download glassfish-embedded-all
-    val url = "https://repo1.maven.org/maven2/org/glassfish/main/extras/glassfish-embedded-all/8.0.0-M8/glassfish-embedded-all-8.0.0-M8.jar"
-    val dest = layout.projectDirectory.file("glassfish-embedded-all-8.0.0-M8.jar")
+    // val url = "https://repo1.maven.org/maven2/org/glassfish/main/extras/glassfish-embedded-all/8.0.0-M8/glassfish-embedded-all-8.0.0-M8.jar"
+    // val dest = layout.projectDirectory.file("glassfish-embedded-all-8.0.0-M8.jar")
+    val url = "https://repo1.maven.org/maven2/org/glassfish/main/extras/glassfish-embedded-all/8.0.0-M9/glassfish-embedded-all-8.0.0-M9.jar"
+    val dest = layout.projectDirectory.file("glassfish-embedded-all-8.0.0-M9.jar")
     if (!dest.asFile.exists()) uri(url).toURL().openStream().use {
         `java.nio.file`.Files.copy(it, dest.asFile.toPath())
     }

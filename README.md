@@ -1,1 +1,5 @@
-# playground-glassfish
+# Playground Glassfish
+
+```shell
+./gradlew run
+```
